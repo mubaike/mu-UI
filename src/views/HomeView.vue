@@ -1,6 +1,6 @@
 <template>
     <div>
-        APP
+
     </div>
 </template>
 
@@ -8,6 +8,6 @@
 
 </script>
 
-<style scoped lang="less">
-    
+<style scoped>
+
 </style>
