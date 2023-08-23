@@ -1,6 +1,6 @@
 <template>
     <div>
-
+            Homr
     </div>
 </template>
 
