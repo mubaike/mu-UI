@@ -3,11 +3,11 @@
     <div class="logo" @click="goHome">
       <span class="name">MU-UI</span>
     </div>
-    <div class="net">
+      <Space class="net" :size="40" aline="center">
         <router-link to="/module">组件</router-link>
         <router-link to="/test">测试</router-link>
         <a href="http://mubais.love">博客</a>
-    </div>
+      </Space>
   </div>
 </template>
 

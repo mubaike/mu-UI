@@ -1,7 +1,9 @@
 <template>
-    <div>
+    <div class="module">
         <SizeBar :sizebar="sizebar"/>
-        <RouterView />
+        <div class="main">
+            <RouterView />
+        </div>
     </div>
 </template>
 
@@ -22,10 +24,28 @@ let sizebar = [
                 src: "icon"
             }
         ]
+    },
+    {
+        title: "排版",
+        list: [
+            {
+                name: "Title 标题",
+                src: "title"
+            },
+            {
+                name: "Text 文本",
+                src: "text"
+            }
+        ]
     }
 ]
 </script>
 
 <style scoped>
-
+.module {
+    min-width: 1200px;
+}
+.main {
+    padding: 24px 56px 56px 324px;
+  }
 </style>
