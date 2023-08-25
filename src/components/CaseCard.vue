@@ -6,7 +6,7 @@
             <slot></slot>
         </div>
 
-        <div @click="clickShow">+</div>
+        <div class="icon" @click="clickShow" :class="{IconActive: showCode}">&lt;/></div>
         <div class="codes" ref="codes" v-show="showCode">
             <highlightjs autodetect :code="code" />
         </div>
@@ -40,14 +40,54 @@ const clickShow = ():void => {
 <style scoped lang="less">
 .case-card {
     max-width: 800px;
+    position: relative;
     .container {
         margin: 12px 0 8px;
         border-radius: @radius-m;
         border: 1px solid @line-color-s;
         padding: 20px;
     }
-    .codes {
-        padding-top: @space-m;
+    .icon{
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        font-size: @size-ss;
+        font-weight: bold;
+        background-color: @bg-color-ss;
+        border-radius: @radius-m;
     }
+
+    .IconActive {
+        background-color: @font-color-l;
+        color: @bg-color-l;
+    }
+
+
+    .codes {
+        // padding-top: @space-m;
+        position: relative;
+        margin-top: 40px;
+        border-radius: @radius-l;
+        overflow: hidden;
+
+        &::after{
+            content: '复制';
+            font-size: @size-ss;
+            position: absolute;
+            top: @space-s;
+            right: @space-s;
+            border-radius: @radius-s;
+            color: @font-color-l;
+            background-color: @bg-color-ss;
+            cursor: pointer;
+        }
+    }
+
+    
 }
 </style>

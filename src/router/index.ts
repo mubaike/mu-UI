@@ -32,6 +32,11 @@ const routes = [
                 path: 'text',
                 name: 'text',
                 component: () => import('../components/units/Typegraphy/Text.vue')
+            },
+            {
+                path: 'paragraph',
+                name: 'paragraph',
+                component: () => import('../components/units/Typegraphy/Paragraph.vue')
             }
         ]
     }

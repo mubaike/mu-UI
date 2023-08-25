@@ -35,6 +35,10 @@ let sizebar = [
             {
                 name: "Text 文本",
                 src: "text"
+            },
+            {
+                name: "Paragraph 段落",
+                src: "paragraph"
             }
         ]
     }
