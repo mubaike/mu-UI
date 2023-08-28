@@ -45,9 +45,9 @@ let sizebar = [
 ]
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .module {
-    min-width: 1200px;
+    min-width: 800px;
 }
 .main {
     padding: 24px 56px 56px 324px;

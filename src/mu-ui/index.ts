@@ -3,6 +3,8 @@ import Title from './components/typography/MuTitle.vue'
 import Text from './components/typography/MuText.vue'
 import Space from './components/Space/MuSpace.vue'
 import Paragraph from './components/typography/MuParagraph.vue'
+import Table from './components/table/MuTable.vue'
+import Button from './components/button/MuButton.vue'
 import type { Component } from 'vue'
 
 const components: {
@@ -12,7 +14,9 @@ const components: {
     Title,
     Text,
     Space,
-    Paragraph
+    Paragraph,
+    Table,
+    Button
 }
 const install = (app: any) =>  {
     //全局挂载
@@ -28,4 +32,6 @@ export {
     Text,      //文本
     Space,     //间距
     Paragraph, //段落
+    Table,     //表格
+    Button,   //按钮
 }

@@ -20,7 +20,13 @@
         <Paragraph :ellipsis="{rows:1,showMore: true}" :copyable="true">按附件爱爱减肥</Paragraph>
         <Paragraph :ellipsis="{rows:2,showMore: true}" :copyable="true">按附件爱发aaaaawdwdwd发而dvvdvfafsdv佛尔阿风啊和非法佛二分哦i范加尔松丰foes附件二哦i发厄缶额u菲菲视频foes分配法 哦UFO色富婆而是纷纷爱减肥</Paragraph>
     </div>
-
+    <div>
+        <Button>默认按钮</Button>
+        <Button type="sceondary">次要按钮</Button>
+        <Button type="outline">线性按钮</Button>
+        <Button shape="circle">参数</Button>
+        <Button shape="square"></Button>
+    </div>
     
 </template>
 

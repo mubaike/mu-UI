@@ -41,6 +41,7 @@ const clickShow = ():void => {
 .case-card {
     max-width: 800px;
     position: relative;
+    margin-bottom: 50px;
     .container {
         margin: 12px 0 8px;
         border-radius: @radius-m;
@@ -58,6 +59,7 @@ const clickShow = ():void => {
         line-height: 25px;
         font-size: @size-ss;
         font-weight: bold;
+        opacity: 0.9;
         background-color: @bg-color-ss;
         border-radius: @radius-m;
     }
@@ -84,6 +86,7 @@ const clickShow = ():void => {
             border-radius: @radius-s;
             color: @font-color-l;
             background-color: @bg-color-ss;
+            opacity: 0.8;
             cursor: pointer;
         }
     }
