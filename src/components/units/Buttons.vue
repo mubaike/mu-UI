@@ -22,8 +22,8 @@
             <Space>
                 <Button>默认样式</Button>
                 <Button shape="round">圆角样式</Button>
-                <Button shape="circle">┼</Button>
-                <Button shape="square">┼</Button>
+                <Button shape="circle"><Icon name="yk-jiahao"></Icon></Button>
+                <Button shape="square"><Icon name="yk-jiahao"></Icon></Button>
             </Space>
         </CaseCard>
         <CaseCard :title="datas[3].title" :note="datas[3].note" :code="datas[3].code">
@@ -76,7 +76,7 @@
             <Title :level="3">API</Title>
             <Text type="secondary">通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：type -> size -> shape -> status -> disabled。</Text>
             <div class="table">
-                <Table :colums="colums" :data="data"></Table>
+                <Table :columns="columns" :data="data"></Table>
             </div>
         </div>
     </main>
@@ -165,7 +165,7 @@ let datas = [
 ]
 
 //API 
-const colums = [
+const columns = [
     {
         title: '参数名',
         dataIndex: 'name',

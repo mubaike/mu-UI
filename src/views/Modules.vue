@@ -21,7 +21,7 @@ let sizebar = [
             },
             {
                 name: "Icon 图标",
-                src: "icon"
+                src: "icons"
             }
         ]
     },

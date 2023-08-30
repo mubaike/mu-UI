@@ -2,16 +2,14 @@
     <div class="paragraph">
         <p :class="[type, { strong: b }]" ref="getDivRef">
             <slot></slot>
-        <div>
             <span v-show="copyable" class="icon">
-                复制
+                <Icon name="yk-kaobei"></Icon>
             </span>
-        </div>
         </p>
         <div class="more" v-show="ismore" @click="getMore">展开</div>
 
         <span class="spack" v-show="ispack" @click="moreline(props.ellipsis.rows)">
-            ▲
+            收起
         </span>
     </div>
 </template>
@@ -116,16 +114,11 @@ onMounted(() => {
     }
 
     .spack {
-        position: absolute;
-        right: -15px;
-        top: 0;
         height: 20px;
         width: 20px;
         text-align: center;
         line-height: 19px;
-        font-weight: 700;
-        color: @bg-color-l;
-        background-color: @font-color-s;
+        color: @lcolor;
         border-radius: @radius-s;
         cursor: pointer;
     }

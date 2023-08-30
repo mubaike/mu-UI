@@ -37,6 +37,11 @@ const routes = [
                 path: 'paragraph',
                 name: 'paragraph',
                 component: () => import('../components/units/Typegraphy/Paragraph.vue')
+            },
+            {
+                path: 'icons',
+                name: 'icons',
+                component: () => import('../components/units/Icons.vue')
             }
         ]
     }

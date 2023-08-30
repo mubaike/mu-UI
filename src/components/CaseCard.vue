@@ -6,7 +6,9 @@
             <slot></slot>
         </div>
 
-        <div class="icon" @click="clickShow" :class="{IconActive: showCode}">&lt;/></div>
+        <div class="icons" @click="clickShow" :class="{ IconActive: showCode }">
+                <Icon name="yk-daima"></Icon>
+        </div>
         <div class="codes" ref="codes" v-show="showCode">
             <highlightjs autodetect :code="code" />
         </div>
@@ -32,7 +34,7 @@ const props = defineProps({
 
 // 代码开关
 const showCode = ref(false);
-const clickShow = ():void => {
+const clickShow = (): void => {
     showCode.value = !showCode.value;
 }
 </script>
@@ -42,13 +44,15 @@ const clickShow = ():void => {
     max-width: 800px;
     position: relative;
     margin-bottom: 50px;
+
     .container {
         margin: 12px 0 8px;
         border-radius: @radius-m;
         border: 1px solid @line-color-s;
         padding: 20px;
     }
-    .icon{
+
+    .icons {
         position: absolute;
         right: 0;
         cursor: pointer;
@@ -57,15 +61,19 @@ const clickShow = ():void => {
         height: 25px;
         text-align: center;
         line-height: 25px;
-        font-size: @size-ss;
+        font-size: 1px;
         font-weight: bold;
         opacity: 0.9;
         background-color: @bg-color-ss;
         border-radius: @radius-m;
+        .icon{
+            font-size: @size-s;
+        }
     }
 
     .IconActive {
         background-color: @font-color-l;
+        // background-color: black;
         color: @bg-color-l;
     }
 
@@ -77,7 +85,7 @@ const clickShow = ():void => {
         border-radius: @radius-l;
         overflow: hidden;
 
-        &::after{
+        &::after {
             content: '复制';
             font-size: @size-ss;
             position: absolute;
@@ -91,6 +99,6 @@ const clickShow = ():void => {
         }
     }
 
-    
+
 }
 </style>

@@ -27,7 +27,9 @@
         <Button shape="circle">参数</Button>
         <Button shape="square"></Button>
     </div>
-    
+    <div>
+        <Icon style="font-size: 30px;"></Icon>
+    </div>
 </template>
 
 <script setup lang="ts">

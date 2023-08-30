@@ -2,10 +2,10 @@
     <div class="mu-table">
         <table cellspacing="0">
             <tr>
-                <th v-for="(item, index) in colums" :key="index">{{ (item as any).title }}</th>
+                <th v-for="(item, index) in columns" :key="index">{{ (item as any).title }}</th>
             </tr>
             <tr v-for="(item, index) in data" :key="index">
-                <td v-for="(item1, index1) in colums" :key="index1" :class="{ light: (item1 as any).light }">
+                <td v-for="(item1, index1) in columns" :key="index1" :class="{ light: (item1 as any).light }">
                     {{ (item as any)[(item1 as any).dataIndex] }}</td>
             </tr>
         </table>
@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 const props = defineProps({
-    colums: {
+    columns: {
         type: Array,
         default: () => []
     },

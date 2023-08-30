@@ -23,7 +23,7 @@
         <div class="api">
             <Title :level="3">API</Title>
             <div unti-table>
-                <Table :colums="colums" :data="data"></Table>
+                <Table :columns="columns" :data="data"></Table>
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@ let datas = [
 ]
 
 //api
-const colums = [
+const columns = [
     {
         title: "参数名",
         dataIndex: "name",

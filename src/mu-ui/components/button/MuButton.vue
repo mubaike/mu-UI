@@ -112,11 +112,11 @@ muShape.value = btShape(props.shape)
     }
 
     .mu-button-bg {
+        position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        position: absolute;
         box-sizing: border-box;
     }
 }
@@ -353,4 +353,5 @@ circle {
     100% {
         stroke-dashoffset: -125px;
     }
-}</style>
+}
+</style>

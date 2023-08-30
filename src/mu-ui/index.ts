@@ -5,6 +5,7 @@ import Space from './components/Space/MuSpace.vue'
 import Paragraph from './components/typography/MuParagraph.vue'
 import Table from './components/table/MuTable.vue'
 import Button from './components/button/MuButton.vue'
+import Icon from './components/icon/MuIcon.vue'
 import type { Component } from 'vue'
 
 const components: {
@@ -16,7 +17,8 @@ const components: {
     Space,
     Paragraph,
     Table,
-    Button
+    Button,
+    Icon,
 }
 const install = (app: any) =>  {
     //全局挂载
@@ -34,4 +36,5 @@ export {
     Paragraph, //段落
     Table,     //表格
     Button,   //按钮
+    Icon,     //图标
 }
