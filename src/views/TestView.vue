@@ -30,12 +30,31 @@
     <div>
         <Icon style="font-size: 30px;"></Icon>
     </div>
+    <div>
+        <Crumb>
+            <CrumbItem>1</CrumbItem>
+            <CrumbItem>2</CrumbItem>
+            <CrumbItem>3</CrumbItem>
+            <CrumbItem>4</CrumbItem>
+        </Crumb>
+        <Crumb :routes="routes"></Crumb>
+    </div>
 </template>
 
 <script setup lang="ts">
-
+const routes = [
+    {
+        name: "首页",
+        src: "javascript:;"
+    },{
+        name: "菜单",
+        src: "javascript:;"
+    },{
+        name: "商店",
+        src: "javascript:;"
+    }
+]
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
 </style>

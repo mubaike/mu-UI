@@ -22,7 +22,7 @@
         </CaseCard>
         <div class="api">
             <Title :level="3">API</Title>
-            <div unti-table>
+            <div class="table">
                 <Table :columns="columns" :data="data"></Table>
             </div>
         </div>
@@ -128,7 +128,7 @@ const data = reactive([
     margin-top: 60px;
 }
 
-.unti-table{
+.table{
     width: 100%;
     overflow-x: auto;
 }

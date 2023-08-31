@@ -38,7 +38,9 @@
         <div class="api">
             <Title :level="3">API</Title>
             <Paragraph>只有一个name</Paragraph>
-            <Table :columns="columns" :data="data"></Table>
+            <div class="table">
+                <Table :columns="columns" :data="data"></Table>
+            </div>
         </div>
     </main>
 </template>
@@ -469,7 +471,7 @@ const data = reactive([
         box-sizing: border-box;
         width: 160px;
         height: 125px;
-        border: 1px solid @font-color-ss;
+        border-radius: @radius-m;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -482,16 +484,24 @@ const data = reactive([
             display: flex;
             justify-content: center;
             align-items: center;
-
-            :hover {
-                transition: all @animatb;
-                font-size: 40px;
-            }
         }
 
         p {
             font-size: 14px;
             margin-top: 10px;
         }
+
+        &:hover {
+            background-color: @font-color-ss;
+            .icon-box{
+                transition: all @animatb;
+                font-size: 40px;
+            }
+        }
     }
-}</style>
+}
+.table {
+    width: 100%;
+    overflow-x: auto;
+}
+</style>

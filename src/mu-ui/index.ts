@@ -6,6 +6,8 @@ import Paragraph from './components/typography/MuParagraph.vue'
 import Table from './components/table/MuTable.vue'
 import Button from './components/button/MuButton.vue'
 import Icon from './components/icon/MuIcon.vue'
+import Crumb from './components/crumb/MuCrumb.vue'
+import CrumbItem from './components/crumb/CrumbItem.vue'
 import type { Component } from 'vue'
 
 const components: {
@@ -19,6 +21,8 @@ const components: {
     Table,
     Button,
     Icon,
+    Crumb,
+    CrumbItem,
 }
 const install = (app: any) =>  {
     //全局挂载
@@ -35,6 +39,8 @@ export {
     Space,     //间距
     Paragraph, //段落
     Table,     //表格
-    Button,   //按钮
-    Icon,     //图标
+    Button,    //按钮
+    Icon,      //图标
+    Crumb,     //面包屑
+    CrumbItem, //面包屑节点
 }

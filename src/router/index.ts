@@ -2,8 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
 const routes = [
-    {   
+    {
         path: '/',
+        redirect: 'home',
+    },{
+        path: '/home',
         name: 'home',
         component: HomeView
     },
@@ -37,11 +40,23 @@ const routes = [
                 path: 'paragraph',
                 name: 'paragraph',
                 component: () => import('../components/units/Typegraphy/Paragraph.vue')
+            },{
+                path: 'table',
+                name: 'table',
+                component: () => import('../components/units/Typegraphy/Table.vue')
             },
             {
                 path: 'icons',
                 name: 'icons',
                 component: () => import('../components/units/Icons.vue')
+            }, {
+                path: 'space',
+                name: 'space',
+                component: () => import('../components/units/Space.vue')
+            }, {
+                path: 'crumb',
+                name: 'crumb',
+                component: () => import('../components/units/Crumb.vue')
             }
         ]
     }
@@ -51,8 +66,8 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
     //每次切换路由页面滚动到顶部
-    scrollBehavior(){
-        return {top: 0}
+    scrollBehavior() {
+        return { top: 0 }
     }
 })
 

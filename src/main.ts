@@ -14,6 +14,8 @@ import hljs from 'highlight.js/lib/core'
 import javascript from 'highlight.js/lib/languages/javascript'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
 
+import 'animate.css/animate.min.css';
+
 hljs.registerLanguage('javascript', javascript)
 
 const app = createApp(App)
