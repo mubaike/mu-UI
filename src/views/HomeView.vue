@@ -1,6 +1,6 @@
 <template>
-    <div>
-            Homr
+    <div class="home">
+        <div class="sub">Home</div>
     </div>
 </template>
 
@@ -8,6 +8,8 @@
 
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
+.sub {
+    text-align: center;
+}
 </style>

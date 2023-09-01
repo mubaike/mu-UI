@@ -16,7 +16,7 @@
 //页面跳转
 const router = useRouter();
 const goHome = () => {
-    router.push({path: '/'})
+    router.push({path: '/home'})
 }
 </script>
 
