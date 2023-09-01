@@ -1,6 +1,6 @@
 <template>
     <div class="module">
-        <transition name="router_animate">
+        <transition name="sizeBar_animate">
             <SizeBar :sizebar="sizebar" class="Bar" v-show="show" @CloseSizeBar="CloseSizeBar" />
         </transition>
         <div @click="OpenSizeBar" v-show="!show" class="openBar">
@@ -13,10 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import SizeBar from "../components/SizeBar.vue";
 
-import 'animate.css';
 //目录
 let sizebar = [
     {
@@ -68,6 +67,14 @@ let sizebar = [
                 src: "crumb"
             }
         ]
+    }, {
+        title: "提示",
+        list: [
+            {
+                name: "Message 消息提示",
+                src: "message"
+            }
+        ]
     }
 ]
 
@@ -84,16 +91,27 @@ const CloseSizeBar = () => {
     show.value = false;
 }
 
-const showtap = () => {
-    if(window.innerWidth <= 770){
+const showbar = (e:any) => {
+    if (e <= 770) {
         show.value = false
-    }else{
+    } else {
         show.value = true
     }
 }
 
-onMounted(()=>{
-    showtap()
+//窗口宽度
+const screenWidth: any = ref(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth)
+
+
+onMounted(() => {
+    //监听窗口变化
+    window.onresize = () => {
+        return (() => {
+            screenWidth.value = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+            showbar(screenWidth.value)
+        })()
+    }
+    showbar(screenWidth.value)
 })
 </script>
 
@@ -106,15 +124,16 @@ onMounted(()=>{
     padding: 24px 56px 56px 324px;
 }
 
-.openBar{
+.openBar {
     display: none;
 }
 
-.router_animate-enter-active {
-  animation: slideInLeft 0.5s;
+.sizeBar_animate-enter-active {
+    animation: slideInLeft 0.5s;
 }
-.router_animate-leave-active {
-  animation: slideOutLeft 0.5s;
+
+.sizeBar_animate-leave-active {
+    animation: slideOutLeft 0.5s;
 }
 
 @media (max-width: 770px) {
@@ -132,7 +151,7 @@ onMounted(()=>{
         padding: 24px 24px;
     }
 
-    .openBar{
+    .openBar {
         display: block;
         position: fixed;
         top: 70px;

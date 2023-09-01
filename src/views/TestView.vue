@@ -39,9 +39,15 @@
         </Crumb>
         <Crumb :routes="routes"></Crumb>
     </div>
+    <div>
+        <Dropdown></Dropdown>
+    </div>
+    <button @click="handleClickMessage">按钮</button>
+    <Icon name="yk-jinggao"></Icon>
 </template>
 
 <script setup lang="ts">
+import {getCurrentInstance}  from 'vue'
 const routes = [
     {
         name: "首页",
@@ -54,6 +60,14 @@ const routes = [
         src: "javascript:;"
     }
 ]
+
+const { proxy }:any = getCurrentInstance()
+const handleClickMessage = () => {
+    // const message = {
+    //     message: "你好"
+    // }
+    proxy.$message({message: "edddddddddddddddddddddddddddddddddddddddd我顶我顶ddddffefe",type: "error"});
+}
 </script>
 
 <style scoped lang="less">

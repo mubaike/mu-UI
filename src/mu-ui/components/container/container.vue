@@ -18,7 +18,6 @@ const props = defineProps({
 
 .container {
     overflow: auto;
-    
     &:hover {
         &::-webkit-scrollbar-thumb{
             background: rgba(0,0,0,0.2);

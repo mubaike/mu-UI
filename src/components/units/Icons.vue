@@ -398,8 +398,6 @@ const icon_list2 = [{
 }, {
     name: 'yike-wujiaoxing'
 }, {
-    name: 'yike-wujiaoxing'
-}, {
     name: 'yike-yingyong'
 }, {
     name: 'yike-xiangshang'
@@ -476,6 +474,8 @@ const data = reactive([
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        // transition: all @animatb;
+        transition: all @animats;
 
         .icon-box {
             font-size: 30px;
@@ -492,14 +492,16 @@ const data = reactive([
         }
 
         &:hover {
-            background-color: @font-color-ss;
-            .icon-box{
+            background-color: @font-color-sss;
+
+            .icon-box {
                 transition: all @animatb;
                 font-size: 40px;
             }
         }
     }
 }
+
 .table {
     width: 100%;
     overflow-x: auto;

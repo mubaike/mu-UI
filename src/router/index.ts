@@ -57,6 +57,10 @@ const routes = [
                 path: 'crumb',
                 name: 'crumb',
                 component: () => import('../components/units/Crumb.vue')
+            }, {
+                path: 'message',
+                name: 'message',
+                component: () => import('../components/units/Message.vue')
             }
         ]
     }

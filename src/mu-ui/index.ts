@@ -8,7 +8,14 @@ import Button from './components/button/MuButton.vue'
 import Icon from './components/icon/MuIcon.vue'
 import Crumb from './components/crumb/MuCrumb.vue'
 import CrumbItem from './components/crumb/CrumbItem.vue'
+import Dropdown from './components/dropdown/MuDropdown.vue'
+import Message from './components/message/Message'
 import type { Component } from 'vue'
+
+//引入动画库
+import 'animate.css/animate.min.css';
+//引入全局样式
+import './assets/style/mu-index.less';
 
 const components: {
     [propName: string]: Component  
@@ -23,16 +30,19 @@ const components: {
     Icon,
     Crumb,
     CrumbItem,
+    Dropdown,
 }
 const install = (app: any) =>  {
     //全局挂载
     for(const componentItem in components) {
         app.component(componentItem,components[componentItem])
     }
+
+    app.config.globalProperties.$message = Message
 }
 
 export {
-    install,
+    install,   //全局
     Container, //区域块
     Title,     //标题
     Text,      //文本
@@ -43,4 +53,6 @@ export {
     Icon,      //图标
     Crumb,     //面包屑
     CrumbItem, //面包屑节点
+    Dropdown,  //下拉菜单
+    Message,   //消息弹窗(全局信息)
 }
