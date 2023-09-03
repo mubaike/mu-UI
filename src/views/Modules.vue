@@ -22,17 +22,16 @@ let sizebar = [
         title: "通用",
         list: [
             {
-                name: "Theme 主题切换",
-                src: "theme"
-            },
-            {
                 name: "Button 按钮",
                 src: "button"
             },
             {
                 name: "Icon 图标",
                 src: "icons"
-            }
+            },{
+                name: "Theme 主题切换",
+                src: "theme"
+            },
         ]
     },
     {

@@ -12,6 +12,7 @@ import TopBar from "./components/TopBar.vue";
 
 <style scoped lang="less">
 .app {
-  margin-top: 60px;
+  // margin-top: 60px;
+  padding-top: 60px;
 }
 </style>
