@@ -4,9 +4,10 @@
       <span class="name">MU-UI</span>
     </div>
       <Space class="net" :size="40" aline="center">
-        <router-link to="/module">组件</router-link>
-        <router-link to="/test">测试</router-link>
-        <a href="http://mubais.love">博客</a>
+        <router-link class="text" to="/module">组件</router-link>
+        <router-link class="text" to="/test">测试</router-link>
+        <Theme></Theme>
+        <a class="text" href="http://mubais.love">博客</a>
       </Space>
   </div>
 </template>
@@ -45,13 +46,10 @@ const goHome = () => {
     .net {
         display: flex;
         align-items: center;
-
-        :nth-child(n){
-            margin-right: 20px;
-            color: @font-color-l;
-            text-decoration: none;
-            line-height: 60px;
+        .text {
+          color: @font-color-l;
         }
     }
 }
+
 </style>

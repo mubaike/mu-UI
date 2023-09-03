@@ -87,8 +87,6 @@ const close = () => {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: @bg-color-l;
-      opacity: 0.6;
     }
   }
 }

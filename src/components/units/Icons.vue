@@ -506,4 +506,12 @@ const data = reactive([
     width: 100%;
     overflow-x: auto;
 }
+
+@media (max-width: 770px) {
+    .exhibition_list {
+        .exhibition_list_item {
+            width: 150px;
+        }
+    }
+}
 </style>

@@ -3,7 +3,7 @@
         rowGap: getMargin(rsize) + 'px',
         columnGap: getMargin(size) + 'px',
         flexWrap: wrap ? 'wrap' : 'nowrap',
-        flexDirection: flexDirection(direction),
+        flexDirection: flexDirection(),
         width: fill ? '100%' : '',
         alignItems: getAlign(aline)
     }">
@@ -59,7 +59,7 @@ const getMargin = (size: number | string): number => {
 }
 
 //排列方式
-const flexDirection = (): string => {
+const flexDirection = () => {
     if (props.direction == "vertical") {
         return 'column'
     } else {

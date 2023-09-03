@@ -44,6 +44,7 @@
     </div>
     <button @click="handleClickMessage">按钮</button>
     <Icon name="yk-jinggao"></Icon>
+    <Theme></Theme>
 </template>
 
 <script setup lang="ts">

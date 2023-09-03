@@ -61,6 +61,10 @@ const routes = [
                 path: 'message',
                 name: 'message',
                 component: () => import('../components/units/Message.vue')
+            }, {
+                path: 'theme',
+                name: 'theme',
+                component: () => import('../components/units/Theme.vue')
             }
         ]
     }

@@ -67,6 +67,7 @@ const clickShow = (): void => {
         background-color: @bg-color-ss;
         border-radius: @radius-m;
         .icon{
+            line-height: 25px;
             font-size: @size-s;
         }
     }
