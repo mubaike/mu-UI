@@ -5,8 +5,9 @@
     </div>
       <Space class="net" :size="40" aline="center">
         <router-link class="text" to="/module">组件</router-link>
-        <router-link class="text" to="/test">测试</router-link>
+        <router-link class="text test" to="/test">测试</router-link>
         <Theme></Theme>
+        <a class="text git" href="https://github.com/mubaike/mu-UI"><Icon name="yike-github"></Icon></a> 
         <a class="text" href="http://mubais.love">博客</a>
       </Space>
   </div>
@@ -36,6 +37,7 @@ const goHome = () => {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid @line-color-s;
+    transition: all @animats;
 
     .name {
         font-size: 18px;
@@ -49,7 +51,22 @@ const goHome = () => {
         .text {
           color: @font-color-l;
         }
+
+        .router-link-active {
+          color: @pcolor;
+          font-weight: 700;
+        }
+
+        .git{
+          font-size: @size-m;
+        }
     }
+}
+
+@media (max-width: 770px){
+  .test {
+    display: none;
+  }
 }
 
 </style>

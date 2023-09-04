@@ -78,6 +78,14 @@ let sizebar = [
                 src: "message"
             }
         ]
+    },{
+        title: "数据输入",
+        list: [
+            {
+                name: "Input 输入框",
+                src: "input"
+            }
+        ]
     }
 ]
 

@@ -8,6 +8,7 @@ export const menusModel = {
         fontcolorm: 'rgba(30,32,37,0.8)',
         fontcolors: 'rgba(30,32,37,0.5)',
         fontcolorss: 'rgba(30,32,37,0.3)',
+        fontcolorsss: 'rgba(30,32,37,0.1)',
         bgcolorl: '#fff',
         bgcolorm: '#F6F6F8',
         bgcolors: '#F3F3F4',

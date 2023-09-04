@@ -42,6 +42,7 @@ const close = () => {
   left: 0;
   z-index: 1;
   background-color: @bg-color-l;
+  transition: all @animats;
 
   .container {
     padding: @space-s @space-m;

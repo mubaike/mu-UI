@@ -2,22 +2,18 @@
   <main class="mu-theme">
     <section class="tap-title">
       <Title :level="2">Theme 主题切换</Title>
-      <paragraph>目前支持夜间模式切换。</paragraph>
+      <paragraph>目前支持浅色模式和深色模式切换。</paragraph>
     </section>
     <section class="wrap-1">
-      <CaseCard
-        :title="datas[0].title"
-        :note="datas[0].note"
-        :code="datas[0].code"
-      >
-        <Theme></Theme>
+      <CaseCard :title="datas[0].title" :note="datas[0].note" :code="datas[0].code">
+        <Space>
+          <Theme></Theme>
+        </Space>
       </CaseCard>
-      <CaseCard
-        :title="datas[1].title"
-        :note="datas[1].note"
-        :code="datas[1].code"
-      >
-        <Theme></Theme>
+      <CaseCard :title="datas[1].title" :note="datas[1].note" :code="datas[1].code">
+        <Space>
+          <Theme></Theme>
+        </Space>
       </CaseCard>
     </section>
   </main>
@@ -51,5 +47,4 @@ const datas = [
 ];
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

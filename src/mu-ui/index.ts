@@ -11,6 +11,7 @@ import CrumbItem from './components/crumb/CrumbItem.vue'
 import Dropdown from './components/dropdown/MuDropdown.vue'
 import Message from './components/message/Message'
 import Theme from './components/theme/MuTheme.vue'
+import Input from './components/input/MuInput.vue'
 import type { Component } from 'vue'
 
 //引入动画库
@@ -33,6 +34,7 @@ const components: {
     CrumbItem,
     Dropdown,
     Theme,
+    Input,
 }
 const install = (app: any) =>  {
     //全局挂载
@@ -58,4 +60,5 @@ export {
     Dropdown,  //下拉菜单
     Message,   //消息弹窗(全局信息)
     Theme,     //主题切换
+    Input,     //输入框
 }

@@ -65,6 +65,10 @@ const routes = [
                 path: 'theme',
                 name: 'theme',
                 component: () => import('../components/units/Theme.vue')
+            },{
+                path: 'input',
+                name: 'input',
+                component: () => import('../components/units/Input.vue')
             }
         ]
     }

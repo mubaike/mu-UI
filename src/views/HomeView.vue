@@ -23,7 +23,7 @@ const gomodule = () => {
 
 //快速上手
 const kuaisu = () => {
-    proxy.$message({message: "还在制作中，敬请请期待！",type: 'warning'})
+    proxy.$message({message: "还在制作中，敬请期待！",type: 'warning'})
 }
 </script>
 

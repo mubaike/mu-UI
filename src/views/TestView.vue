@@ -17,8 +17,9 @@
         <Text b type="danger">文本</Text>
     </div>
     <div style="width: 200px;">
-        <Paragraph :ellipsis="{rows:1,showMore: true}" :copyable="true">按附件爱爱减肥</Paragraph>
-        <Paragraph :ellipsis="{rows:2,showMore: true}" :copyable="true">按附件爱发aaaaawdwdwd发而dvvdvfafsdv佛尔阿风啊和非法佛二分哦i范加尔松丰foes附件二哦i发厄缶额u菲菲视频foes分配法 哦UFO色富婆而是纷纷爱减肥</Paragraph>
+        <Paragraph :ellipsis="{ rows: 1, showMore: true }" :copyable="true">按附件爱爱减肥</Paragraph>
+        <Paragraph :ellipsis="{ rows: 2, showMore: true }" :copyable="true">
+            按附件爱发aaaaawdwdwd发而dvvdvfafsdv佛尔阿风啊和非法佛二分哦i范加尔松丰foes附件二哦i发厄缶额u菲菲视频foes分配法 哦UFO色富婆而是纷纷爱减肥</Paragraph>
     </div>
     <div>
         <Button>默认按钮</Button>
@@ -44,32 +45,44 @@
     </div>
     <button @click="handleClickMessage">按钮</button>
     <Icon name="yk-jinggao"></Icon>
-    <Theme></Theme>
+    <!-- <Theme></Theme> -->
+    <div class="t1">
+        <Input v-model="inputValue" :maxLength="4" placeholder="请输入" allowClear @clear="() => inputValue = ''">{{ inputValue }}</Input>
+        <Input error size="xl" v-model="inputValue" placeholder="请输入" allowClear @clear="() => inputValue = ''">{{
+            inputValue }}</Input>
+    </div>
 </template>
 
 <script setup lang="ts">
-import {getCurrentInstance}  from 'vue'
+import { getCurrentInstance, ref } from 'vue'
 const routes = [
     {
         name: "首页",
         src: "javascript:;"
-    },{
+    }, {
         name: "菜单",
         src: "javascript:;"
-    },{
+    }, {
         name: "商店",
         src: "javascript:;"
     }
 ]
 
-const { proxy }:any = getCurrentInstance()
+const { proxy }: any = getCurrentInstance()
 const handleClickMessage = () => {
     // const message = {
     //     message: "你好"
     // }
-    proxy.$message({message: "edddddddddddddddddddddddddddddddddddddddd我顶我顶ddddffefe",type: "error"});
+    proxy.$message({ message: "edddddddddddddddddddddddddddddddddddddddd我顶我顶ddddffefe", type: "error" });
 }
+
+//input
+const inputValue = ref('')
+
 </script>
 
 <style scoped lang="less">
+.t1 {
+    padding-bottom: 20px;
+}
 </style>
