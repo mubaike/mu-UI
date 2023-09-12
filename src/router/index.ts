@@ -69,6 +69,10 @@ const routes = [
                 path: 'input',
                 name: 'input',
                 component: () => import('../components/units/Input.vue')
+            }, {
+                path: 'dropdown',
+                name: 'dropdown',
+                component: () => import('../components/units/Dropdown.vue')
             }
         ]
     }

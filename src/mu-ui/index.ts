@@ -8,10 +8,13 @@ import Button from './components/button/MuButton.vue'
 import Icon from './components/icon/MuIcon.vue'
 import Crumb from './components/crumb/MuCrumb.vue'
 import CrumbItem from './components/crumb/CrumbItem.vue'
-import Dropdown from './components/dropdown/MuDropdown.vue'
 import Message from './components/message/Message'
 import Theme from './components/theme/MuTheme.vue'
 import Input from './components/input/MuInput.vue'
+import Dropdown from './components/dropdown/MuDropdown.vue'
+import DropdownItem from './components/dropdown/MuDropdownItem.vue'
+import Submenu from './components/dropdown/MuSubmenu.vue'
+
 import type { Component } from 'vue'
 
 //引入动画库
@@ -32,9 +35,11 @@ const components: {
     Icon,
     Crumb,
     CrumbItem,
+    DropdownItem,
     Dropdown,
     Theme,
     Input,
+    Submenu,
 }
 const install = (app: any) =>  {
     //全局挂载
@@ -58,6 +63,8 @@ export {
     Crumb,     //面包屑
     CrumbItem, //面包屑节点
     Dropdown,  //下拉菜单
+    DropdownItem,  //下拉菜单子项
+    Submenu,   //二级菜单
     Message,   //消息弹窗(全局信息)
     Theme,     //主题切换
     Input,     //输入框

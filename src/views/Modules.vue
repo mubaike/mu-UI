@@ -68,6 +68,9 @@ let sizebar = [
             {
                 name: "BreadCrumb 面包屑",
                 src: "crumb"
+            },{
+                name: "Dropdown 下拉菜单",
+                src: "dropdown"
             }
         ]
     }, {

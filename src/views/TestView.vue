@@ -1,4 +1,31 @@
 <template>
+    <div class="d1">
+        <Dropdown trigger="click">
+            <Button type="sceondary">hover</Button>
+            <template #content class="d2">
+                <DropdownItem><a href="https://baidu.com">下拉菜单1</a></DropdownItem>
+                <DropdownItem>下拉菜单2</DropdownItem>
+                <Submenu>
+                    二级菜单
+                    <template #content>
+                        <DropdownItem>二级菜单</DropdownItem>
+                        <DropdownItem>二级菜单</DropdownItem>
+                        <DropdownItem>二级菜单</DropdownItem>
+                        <DropdownItem>二级菜单</DropdownItem>
+                        <Submenu>
+                            二级菜单
+                            <template #content>
+                                <DropdownItem>二级菜单</DropdownItem>
+                                <DropdownItem>二级菜单</DropdownItem>
+                                <DropdownItem>二级菜单</DropdownItem>
+                                <DropdownItem>二级菜单</DropdownItem>
+                            </template>
+                        </Submenu>
+                    </template>
+                </Submenu>
+            </template>
+        </Dropdown>
+    </div>
     <div>
         <Title :level=1>标题</Title>
         <Title :level=2 type="primary">标题</Title>
@@ -32,7 +59,7 @@
         <Icon style="font-size: 30px;"></Icon>
     </div>
     <div>
-        <Crumb>
+        <Crumb trigger="click">
             <CrumbItem>1</CrumbItem>
             <CrumbItem>2</CrumbItem>
             <CrumbItem>3</CrumbItem>
@@ -47,13 +74,15 @@
     <Icon name="yk-jinggao"></Icon>
     <!-- <Theme></Theme> -->
     <div class="t1">
-        <Input v-model="inputValue" :maxLength="4" placeholder="请输入" allowClear @clear="() => inputValue = ''">{{ inputValue }}</Input>
+        <Input v-model="inputValue" :maxLength="4" placeholder="请输入" allowClear @clear="() => inputValue = ''">{{ inputValue
+        }}</Input>
         <Input error size="xl" v-model="inputValue" placeholder="请输入" allowClear @clear="() => inputValue = ''">{{
             inputValue }}</Input>
     </div>
 </template>
 
 <script setup lang="ts">
+import { Dropdown } from '@/mu-ui';
 import { getCurrentInstance, ref } from 'vue'
 const routes = [
     {
@@ -84,5 +113,14 @@ const inputValue = ref('')
 <style scoped lang="less">
 .t1 {
     padding-bottom: 20px;
+}
+
+.d1 {
+    margin-left: 100px;
+    width: 50px;
+}
+
+.d2 {
+    width: 50px;
 }
 </style>
